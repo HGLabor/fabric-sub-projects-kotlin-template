@@ -13,6 +13,7 @@ defaultTasks("clean", "build")
 
 allprojects {
   group = "com.example"
+  description = "Template Project"
 
   apply(plugin = "fabric-loom")
 
@@ -74,8 +75,8 @@ subprojects {
 
   //ich weiß das ist kriminell aber
   version = rootProject.libs.versions.minecraft.get() + "-" + when (name) {
-    "template-api" -> "3.0.0"
-    "template-client" -> "1.0.5"
+    "template-api" -> "1.0.0"
+    "template-client" -> "1.0.0"
     else -> version
   }
 
