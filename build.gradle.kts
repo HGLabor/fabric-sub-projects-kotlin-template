@@ -97,19 +97,9 @@ subprojects {
 
   tasks.withType<KotlinCompile>().configureEach {
     compilerOptions {
-      freeCompilerArgs = listOf("-Xcontext-receivers")
+      freeCompilerArgs = listOf("-Xcontext-receivers", "-Xjvm-default=all", "-Xopt-in=kotlin.RequiresOptIn")
     }
   }
-
-
-  /*tasks.withType<KotlinCompile>().configureEach {
-    kotlinOptions {
-      jvmTarget = "21"
-      freeCompilerArgs += "-Xcontext-receivers"
-      freeCompilerArgs += "-Xjvm-default=all"
-      freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
-    }
-  }*/
 
   tasks.withType<JavaCompile>().configureEach {
     // options
