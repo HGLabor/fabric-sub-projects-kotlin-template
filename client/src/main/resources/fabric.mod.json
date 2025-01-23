@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "template-client",
+  "version": "${version}",
+  "name": "Template Client",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "ARR",
+  "icon": "assets/template-client/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "value": "com.example.TemplateClient",
+        "adapter": "kotlin"
+      }
+    ]
+  },
+  "mixins": [
+    "template-client.mixins.json"
+  ],
+  "depends": {
+  }
+}
